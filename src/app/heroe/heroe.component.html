@@ -1,0 +1,36 @@
+<h1>
+    Heroe component works
+</h1>
+
+<button type="button" (click)="mostrar()">
+    Mostrar
+</button>
+
+<button type="button" (click)="ocultar()">
+    Ocultar
+</button>
+
+
+<div *ngIf="div; else Oculto" class="div-oculto">
+
+    <button type="button" (click)="borrarHeroe()">
+        borrar
+    </button>
+
+    <h3>Se borro: {{heroeBorrado}}</h3>
+</div>
+
+<ng-template #Oculto>
+    <span>aqui yace un div oculto</span>
+</ng-template>
+
+
+<div> 
+    <ul>
+        <li *ngFor="let heroe of heroes;let i =index" >
+            {{i+1}} - {{heroe}}
+        </li>
+    </ul>
+</div>
+
+
