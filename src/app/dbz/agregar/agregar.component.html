@@ -1,0 +1,21 @@
+<h3> Agregar</h3>
+<hr>
+<span style="color: brown;">{{this.nuevo.nombre}}</span>
+
+<form (ngSubmit)="agregar( )">
+    <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre">
+    <!--
+                Esto con solo [] me indica que es para coger y traer el valor
+                de la variable nuevo.nombre y ponerla ahi, los () hace que tambien sirva de respuesta, para que 
+                cuando se escriba un nuevo valor este se lleve a nuevo.nombre.ngModel
+                Esto cambia en tiempo real
+            -->
+
+
+    <!-- Eso se hacia antes, pero angular nos facilita todo esto al momento d eponer proiedades sobre los forms
+                [value]="nuevo.nombre"
+                (input)="nombreFuncion($event)" 
+            -->
+    <input type="number" placeholder="Poder" name="poder" [(ngModel)]="nuevo.poder">
+    <button type="submit"> Agregar</button>
+</form>
